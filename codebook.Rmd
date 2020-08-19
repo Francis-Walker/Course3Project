@@ -1,0 +1,53 @@
+---
+title: "codebook"
+output: html_document
+---
+
+
+
+Variable list and descriptions
+------------------------------
+
+
+| Variable name    | Description
+| -----------------|:------------
+| subject          | Subject ID (1,2, ..., 30 - 30 subjects in total) 
+| activity         | Activity name (e.g. WALKING, LAYING, etc. 6 activities in total)
+| Domain           | Time domain or Frequency domain signal (Time or Freq)
+| Instrument       | Instrument that measured the signal (Accelerometer or Gyroscope)
+| Acceleration     | Acceleration signal (Body or Gravity)
+| Statistic        | Mean or Standard Deviation (Mean, STD)
+| Jerk             | Jerk signal
+| Magnitude        | Magnitude of the signals
+| Axis             | 3-axial signals in the X, Y and Z directions (X, Y, or Z)
+| Count            | Number of data points used to compute `average`
+| Average          | Average of each variable for each activity and each subject
+
+str(TIDY)
+Classes ‘data.table’ and 'data.frame':	11880 obs. of  11 variables:
+
+ $ subject     : int  1 1 1 1 1 1 1 1 1 1 ...
+ 
+ $ activity    : Factor w/ 6 levels "LAYING","SITTING",..: 1 1 1 1 1 1 1 1 1 1 ...
+ 
+ $ Acceleration: Factor w/ 3 levels NA,"Body","Gravity": 1 1 1 1 1 1 1 1 1 1 ...
+ 
+ $ Domain      : Factor w/ 2 levels "Time","Freq": 1 1 1 1 1 1 1 1 1 1 ...
+ 
+ $ Instrument  : Factor w/ 2 levels "Accelerometer",..: 2 2 2 2 2 2 2 2 2 2 ...
+ 
+ $ Jerk        : Factor w/ 2 levels NA,"Jerk": 1 1 1 1 1 1 1 1 2 2 ...
+ 
+ $ Magnitude   : Factor w/ 2 levels NA,"Magnitude": 1 1 1 1 1 1 2 2 1 1 ...
+ 
+ $ Statistic   : Factor w/ 2 levels "Mean","SD": 1 1 1 2 2 2 1 2 1 1 ...
+ 
+ $ Axis        : Factor w/ 4 levels NA,"X","Y","Z": 2 3 4 2 3 4 1 1 2 3 ...
+ 
+ $ count       : int  50 50 50 50 50 50 50 50 50 50 ...
+ 
+ $ average     : num  -0.0166 -0.0645 0.1487 -0.8735 -0.9511 ...
+ 
+ - attr(*, "sorted")= chr [1:9] "subject" "activity" "Acceleration" "Domain" ...
+ 
+ - attr(*, ".internal.selfref")=<externalptr> 
